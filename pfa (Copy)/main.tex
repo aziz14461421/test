@@ -1,0 +1,107 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{textpos}
+\usepackage{dirtytalk}
+\usepackage{fancyhdr}
+\usepackage[nottoc]{tocbibind}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage[pages=some]{background}
+\usepackage{mathrsfs}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{longtable}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{caption}
+%\captionsetup[table]{position=bottom}
+\usepackage{siunitx}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}   
+  
+ 
+
+
+
+% For dummy lipsum text
+\usepackage{lipsum}
+
+\usepackage{hyperref}
+\hypersetup{ colorlinks,citecolor=blue,filecolor=blue,linkcolor=blue, urlcolor=blue}
+\numberwithin{equation}{section}
+
+
+\begin{document}
+\title{Streamlined Hotel Room Reservation Web App }
+\author{Abidi Ranim}
+\date{Academic year 2021-2022}
+
+%régler l'espacement entre les lignes
+\newcommand{\HRule}{\rule{\linewidth}{0.6mm}}
+
+%page de garde
+\input{./title.tex}
+
+%page blanche
+%ne pas numéroter cette page
+\pagenumbering{Roman}
+\input{Thanking}
+\include{abstract1}               
+\addcontentsline{toc}{chapter}{ Abstract}
+\tableofcontents
+\listoffigures
+
+
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+
+
+
+
+%ne pas numéroter le sommaire
+
+%espacement entre les lignes d'un tableau
+\renewcommand{\arraystretch}{1.5}
+
+%====================== INCLUSION DES PARTIES ======================
+
+%recommencer la numérotation des pages à "1"
+%\addtocontents{toc}{\protect\enlargethispage{\baselineskip}}
+%\onehalfspacing
+
+
+\input{introduction}
+\pagenumbering{arabic}
+
+\input{chap1}
+\input{chap2}
+\input{chap3}
+\input{chap4}
+\input{conclusion}
+
+
+%récupérer les citation avec "/footnotemark"
+\nocite{*}
+
+%choix du style de la biblio
+\bibliographystyle{acm}
+%inclusion de la biblio
+\bibliography{references.bib}
+
+\end{document}
